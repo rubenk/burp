@@ -2,8 +2,12 @@
 *~
 *.swp
 *.swo
-autoconf/Make.common
+/autoconf/Make.common
 /autom4te.cache/
+/autoconf/m4/*.m4
+/autoconf/ltmain.sh
+/aclocal.m4
+/configure
 config.log
 config.out
 config.status
