@@ -8,6 +8,7 @@
 /autoconf/ltmain.sh
 /aclocal.m4
 /configure
+/config.h.in
 config.log
 config.out
 config.status
