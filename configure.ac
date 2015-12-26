@@ -218,12 +218,6 @@ dnl Burp OPSys Distribution determination (see aclocal.m4)
 dnl ----------------------------------------------------------
 BA_CHECK_OPSYS_DISTNAME
 
-dnl --------------------------------------------------
-dnl Suppport for gettext (translations)
-dnl By default, $datarootdir is ${prefix}/share
-dnl --------------------------------------------------
-AM_GNU_GETTEXT([external])
-
 dnl ------------------------------------------------------------------
 dnl If the user has not set --prefix, we set our default to nothing.
 dnl In this case, if the user has not set --sysconfdir, we set it
