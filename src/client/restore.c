@@ -590,7 +590,7 @@ int do_restore_client(struct asfd *asfd,
 	else
 		logp("Streaming restore direct\n");
 
-	logf("\n");
+	vlog("\n");
 
 //	if(get_int(confs[OPT_SEND_CLIENT_CNTR]) && cntr_recv(confs))
 //		goto error;
@@ -697,7 +697,7 @@ int do_restore_client(struct asfd *asfd,
 			case CMD_MESSAGE:
 			case CMD_WARNING:
 				log_recvd(&sb->path, cntr, 1);
-				logf("\n");
+				vlog("\n");
 				continue;
 			default:
 				break;

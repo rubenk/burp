@@ -124,7 +124,7 @@ void logc(const char *fmt, ...)
 	va_end(ap);
 }
 
-void logf(const char *fmt, ...)
+void vlog(const char *fmt, ...)
 {
 #ifndef UTEST
 	char buf[512]="";
