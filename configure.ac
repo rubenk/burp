@@ -12,7 +12,7 @@ AC_CONFIG_SRCDIR([src/prog.c])
 AM_INIT_AUTOMAKE([foreign -Wall dist-bzip2 no-dist-gzip tar-ustar subdir-objects 1.11])
 AM_SILENT_RULES([yes])
 
-AC_LANG([C++])
+AC_LANG([C])
 
 : ${CPPFLAGS="-Wall -g -O2"}
 
@@ -23,7 +23,7 @@ dnl -------------------------------------------------------
 dnl Check for compiler.
 dnl ------------------------------------------------------
 
-AC_PROG_CXX
+AC_PROG_CC
 
 dnl -------------------------------------------------------
 dnl Check for programs.
@@ -449,9 +449,6 @@ fi
 if test "x$scriptdir" = x; then
   AC_SUBST([scriptdir], ['${pkgdatadir}/scripts'])
 fi
-
-# we only build with a c++ compiler at the moment
-CC=$CXX
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
