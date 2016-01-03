@@ -80,7 +80,7 @@ int readdir_r(DIR *dirp, struct dirent *entry, struct dirent **result);
  * Definition of the find_files packet passed as the
  * first argument to the find_files callback subroutine.
  */
-struct FF_PKT
+typedef struct FF_PKT
 {
 	char *fname;		/* full filename */
 	long flen;		/* length of name component */
@@ -88,13 +88,13 @@ struct FF_PKT
 	struct stat statp;	/* stat packet */
 	uint64_t winattr;	/* windows attributes */
 	int type;		/* FT_ type from above */
-};
+} FF_PKT;
 
-extern FF_PKT *find_files_init(
-	int callback(struct asfd *asfd, FF_PKT *ff, struct conf **confs));
-extern void find_files_free(FF_PKT **ff);
+extern struct FF_PKT *find_files_init(
+	int callback(struct asfd *asfd, struct FF_PKT *ff, struct conf **confs));
+extern void find_files_free(struct FF_PKT **ff);
 extern int find_files_begin(struct asfd *asfd,
-	FF_PKT *ff_pkt, struct conf **confs, char *fname);
+	struct FF_PKT *ff_pkt, struct conf **confs, char *fname);
 // Returns the level of compression.
 extern int in_exclude_comp(struct strlist *excom, const char *fname,
 	int compression);
