@@ -102,6 +102,8 @@ AC_CHECK_FUNCS_ONCE([lockf lutimes chflags readdir_r])
 
 AC_FUNC_ALLOCA
 
+AC_SEARCH_LIBS([ceil], [m])
+AC_SEARCH_LIBS([sqrt], [m])
 AC_SEARCH_LIBS([inet_ntop], [nsl])
 AC_SEARCH_LIBS([socket], [socket])
 
