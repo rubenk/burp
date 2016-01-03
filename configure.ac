@@ -95,25 +95,6 @@ if test "$ba_cv_header_utime_h" = "yes"; then
 fi
 
 dnl --------------------------------------------------------------------------
-dnl Check for typeof()
-dnl --------------------------------------------------------------------------
-AC_CACHE_CHECK([for typeof], [ba_cv_have_typeof], [
-  AC_COMPILE_IFELSE(
-    [AC_LANG_PROGRAM(
-        [[char *a = 0;]],
-        [[a = (typeof a)a;]]
-    )],
-    [ba_cv_have_typeof=yes],
-    [ba_cv_have_typeof=no],
-    [ba_cv_have_typeof=no]
-  )
-])
-
-if test "$ba_cv_have_typeof" = "yes"; then
-  AC_DEFINE([HAVE_TYPEOF], [1], [Define to 1 if compiler has typeof])
-fi
-
-dnl --------------------------------------------------------------------------
 dnl Check for required functions
 dnl --------------------------------------------------------------------------
 
