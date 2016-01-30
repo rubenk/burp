@@ -146,7 +146,8 @@ static void add_to_ioevent(struct ioevent_list *ioevent_list,
 		fail_unless((ioevent[*i].iobuf.buf=
 			(char *)malloc_w(dlen+1, __func__))!=NULL);
 		fail_unless(memcpy(ioevent[*i].iobuf.buf,
-			data, dlen+1)!=NULL);
+			data, dlen)!=NULL);
+		ioevent[*i].iobuf.buf[dlen] = '\0';
 	}
 	(*i)++;
 }
