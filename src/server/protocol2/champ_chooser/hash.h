@@ -29,8 +29,6 @@ struct hash_weak
 	UT_hash_handle hh;
 };
 
-extern struct hash_weak *hash_table;
-
 extern struct hash_weak *hash_weak_find(uint64_t weak);
 extern struct hash_strong *hash_strong_find(struct hash_weak *hash_weak,
 	uint8_t *md5sum);

@@ -6,7 +6,7 @@
 #include "../../../sbuf.h"
 #include "hash.h"
 
-struct hash_weak *hash_table=NULL;
+static struct hash_weak *hash_table;
 
 struct hash_weak *hash_weak_find(uint64_t weak)
 {
