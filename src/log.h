@@ -23,9 +23,6 @@ extern void log_oom_w(const char *func, const char *orig_func);
 extern int log_incexcs_buf(const char *incexc);
 extern void log_recvd(struct iobuf *iobuf, struct cntr *cntr, int print);
 
-#ifndef __GNUC__
-#define __attribute__(x) /*NOTHING*/
-#endif
 extern void logp(const char *fmt, ...) __attribute__((format (printf, 1, 2)));
 extern void logp_ssl_err(const char *fmt, ...) __attribute__((format (printf, 1, 2)));
 extern void logc(const char *fmt, ...) __attribute__((format (printf, 1, 2)));
