@@ -1316,7 +1316,6 @@ int status_client_ncurses_main_loop(struct async *as,
 {
 	int ret=-1;
 	char *client=NULL;
-	int count=0;
 	struct asfd *asfd=NULL;
 	struct asfd *sfd=NULL; // Server asfd.
 	int reqdone=0;
@@ -1489,7 +1488,6 @@ int status_client_ncurses(struct conf **confs)
         int ret=-1;
 	int csin=-1;
 	int csout=-1;
-	pid_t childpid=-1;
 	struct async *as=NULL;
 	const char *monitor_logfile=get_string(confs[OPT_MONITOR_LOGFILE]);
 	struct asfd *so_asfd=NULL;
@@ -1506,9 +1504,8 @@ int status_client_ncurses(struct conf **confs)
 
 	// Fork a burp child process that will contact the server over SSL.
 	// We will read and write from and to its stdout and stdin.
-	if((childpid=fork_monitor(&csin, &csout, confs))<0)
+	if(fork_monitor(&csin, &csout, confs)<0)
 		goto end;
-//printf("childpid: %d\n", childpid);
 
 	if(!(as=async_alloc())
 	  || as->init(as, 0)
