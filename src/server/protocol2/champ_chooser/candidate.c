@@ -10,8 +10,8 @@
 
 #include <assert.h>
 
-struct candidate **candidates=NULL;
-size_t candidates_len=0;
+static struct candidate **candidates;
+size_t candidates_len;
 
 #ifndef UTEST
 static

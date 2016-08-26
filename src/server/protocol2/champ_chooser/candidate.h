@@ -18,7 +18,6 @@ struct candidate
 	char *path;
 };
 
-extern struct candidate **candidates;
 extern size_t candidates_len;
 
 extern void candidates_free(void);
