@@ -53,7 +53,7 @@ struct mystruct
 	UT_hash_handle hh;
 };
 
-struct mystruct *myfiles=NULL;
+static struct mystruct *myfiles;
 
 static struct mystruct *find_key(off_t st_size)
 {
