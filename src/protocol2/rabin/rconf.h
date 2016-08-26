@@ -23,6 +23,5 @@ struct rconf
 };
 
 extern void rconf_init(struct rconf *rconf);
-extern int rconf_check(struct rconf *rconf);
 
 #endif
