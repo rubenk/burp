@@ -268,27 +268,27 @@ static void incr_phase1_val(struct cntr *cntr, char ch, uint64_t val)
 
 static void incr_count(struct cntr *cntr, char ch)
 {
-	return incr_count_val(cntr, ch, 1);
+	incr_count_val(cntr, ch, 1);
 }
 
 static void incr_same(struct cntr *cntr, char ch)
 {
-	return incr_same_val(cntr, ch, 1);
+	incr_same_val(cntr, ch, 1);
 }
 
 static void incr_changed(struct cntr *cntr, char ch)
 {
-	return incr_changed_val(cntr, ch, 1);
+	incr_changed_val(cntr, ch, 1);
 }
 
 static void incr_deleted(struct cntr *cntr, char ch)
 {
-	return incr_deleted_val(cntr, ch, 1);
+	incr_deleted_val(cntr, ch, 1);
 }
 
 static void incr_phase1(struct cntr *cntr, char ch)
 {
-	return incr_phase1_val(cntr, ch, 1);
+	incr_phase1_val(cntr, ch, 1);
 }
 
 static void print_end(uint64_t val)
