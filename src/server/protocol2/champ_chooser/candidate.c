@@ -53,7 +53,7 @@ static void candidates_set_score_pointers(struct candidate **candidates,
 		candidates[a]->score=&(scores->scores[a]);
 }
 
-struct candidate *candidates_add_new(void)
+static struct candidate *candidates_add_new(void)
 {
 	struct candidate *candidate;
 

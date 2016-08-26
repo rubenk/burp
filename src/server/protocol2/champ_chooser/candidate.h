@@ -21,7 +21,6 @@ struct candidate
 extern size_t candidates_len;
 
 extern void candidates_free(void);
-extern struct candidate *candidates_add_new(void);
 extern enum cand_ret candidate_load(struct candidate *candidate,
 	const char *path, struct scores *scores);
 extern int candidate_add_fresh(const char *path, const char *directory,
