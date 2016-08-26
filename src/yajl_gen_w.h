@@ -15,7 +15,6 @@ extern int yajl_map_close_w(void);
 extern int yajl_array_open_w(void);
 extern int yajl_array_close_w(void);
 extern int yajl_gen_str_w(const char *str);
-extern int yajl_gen_int_w(long long num);
 extern int yajl_gen_str_pair_w(const char *field, const char *value);
 extern int yajl_gen_int_pair_w(const char *field, long long value);
 

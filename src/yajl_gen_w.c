@@ -29,7 +29,7 @@ int yajl_gen_str_w(const char *str)
 		(const unsigned char *)str, strlen(str))!=yajl_gen_status_ok;
 }
 
-int yajl_gen_int_w(long long num)
+static int yajl_gen_int_w(long long num)
 {
 	return yajl_gen_integer(yajl, num)!=yajl_gen_status_ok;
 }
