@@ -13,6 +13,10 @@
 
 #include <uthash.h>
 
+#ifndef SYSCONFDIR
+#define SYSCONFDIR "/etc/burp"
+#endif
+
 #define LOCKFILE_NAME		"lockfile"
 #define BEDUP_LOCKFILE_NAME	"lockfile.bedup"
 

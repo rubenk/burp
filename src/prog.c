@@ -13,6 +13,10 @@
 #include "server/protocol2/bsigs.h"
 #include "server/protocol2/champ_chooser/champ_server.h"
 
+#ifndef SYSCONFDIR
+#define SYSCONFDIR "/etc/burp"
+#endif
+
 static char *get_conf_path(void)
 {
 	static char path[256]="";
