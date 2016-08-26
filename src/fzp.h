@@ -44,7 +44,6 @@ extern char *fzp_gets(struct fzp *fzp, char *s, int size);
 extern int fzp_fileno(struct fzp *fzp);
 
 extern struct fzp *fzp_dopen(int fd, const char *mode);
-extern struct fzp *fzp_gzdopen(int fd, const char *mode);
 
 extern void fzp_ERR_print_errors_fp(struct fzp *fzp);
 extern X509 *fzp_PEM_read_X509(struct fzp *fzp);

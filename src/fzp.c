@@ -401,11 +401,6 @@ struct fzp *fzp_dopen(int fd, const char *mode)
 	return fzp_do_dopen(fd, mode, FZP_FILE);
 }
 
-struct fzp *fzp_gzdopen(int fd, const char *mode)
-{
-	return fzp_do_dopen(fd, mode, FZP_COMPRESSED);
-}
-
 void fzp_ERR_print_errors_fp(struct fzp *fzp)
 {
 	if(fzp) switch(fzp->type)
