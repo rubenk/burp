@@ -356,25 +356,11 @@ void cntr_add_same(struct cntr *c, char ch)
 	incr_same(c, CMD_GRAND_TOTAL);
 }
 
-void cntr_add_same_val(struct cntr *c, char ch, uint64_t val)
-{
-	incr_same_val(c, ch, val);
-	incr_same_val(c, CMD_TOTAL, val);
-	incr_same_val(c, CMD_GRAND_TOTAL, val);
-}
-
 void cntr_add_changed(struct cntr *c, char ch)
 {
 	incr_changed(c, ch);
 	incr_changed(c, CMD_TOTAL);
 	incr_changed(c, CMD_GRAND_TOTAL);
-}
-
-void cntr_add_changed_val(struct cntr *c, char ch, uint64_t val)
-{
-	incr_changed_val(c, ch, val);
-	incr_changed_val(c, CMD_TOTAL, val);
-	incr_changed_val(c, CMD_GRAND_TOTAL, val);
 }
 
 void cntr_add_deleted(struct cntr *c, char ch)
