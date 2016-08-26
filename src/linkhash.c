@@ -37,7 +37,7 @@
 #include "linkhash.h"
 
 // List of all hard linked files found.
-struct f_link **linkhash=NULL;
+static struct f_link **linkhash;
 
 #define LINK_HASHTABLE_BITS 16
 #define LINK_HASHTABLE_SIZE (1<<LINK_HASHTABLE_BITS)

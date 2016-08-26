@@ -17,8 +17,6 @@ struct f_link
 	char *name;
 };
 
-extern struct f_link **linkhash;
-
 extern int linkhash_init(void);
 extern void linkhash_free(void);
 extern struct f_link *linkhash_search(struct stat *statp,
