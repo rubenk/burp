@@ -69,7 +69,7 @@ static int check_srestore(struct conf **confs, const char *path)
 	return 0;
 }
 
-int want_to_restore(int srestore, struct sbuf *sb,
+static int want_to_restore(int srestore, struct sbuf *sb,
 	regex_t *regex, struct conf **cconfs)
 {
 	return (!srestore || check_srestore(cconfs, sb->path.buf))
@@ -259,7 +259,7 @@ static int restore_sbuf(struct asfd *asfd, struct sbuf *sb, struct bu *bu,
 	}
 }
 
-int restore_ent(struct asfd *asfd,
+static int restore_ent(struct asfd *asfd,
 	struct sbuf **sb,
 	struct slist *slist,
 	struct bu *bu,

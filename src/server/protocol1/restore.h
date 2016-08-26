@@ -4,6 +4,7 @@
 #include "../../action.h"
 #include "../restore.h"
 
+struct bu;
 struct sbuf;
 
 extern int restore_sbuf_protocol1(struct asfd *asfd, struct sbuf *sb,
