@@ -113,7 +113,6 @@ int run_script_to_buf(struct asfd *asfd,
 {
 	int a=0;
 	int l=0;
-	pid_t p;
 	struct fzp *serr=NULL;
 	struct fzp *sout=NULL;
 	char *cmd[64]={ NULL };
@@ -135,13 +134,13 @@ int run_script_to_buf(struct asfd *asfd,
 	fflush(stdout); fflush(stderr);
 	if(do_wait)
 	{
-		if((p=forkchild(NULL,
-			&sout, &serr, cmd[0], cmd))==-1) return -1;
+		if(forkchild(NULL,
+			&sout, &serr, cmd[0], cmd)==-1) return -1;
 	}
 	else
 	{
-		if((p=forkchild_no_wait(NULL,
-			&sout, &serr, cmd[0], cmd))==-1) return -1;
+		if(forkchild_no_wait(NULL,
+			&sout, &serr, cmd[0], cmd)==-1) return -1;
 		return 0;
 	}
 #ifdef HAVE_WIN32
