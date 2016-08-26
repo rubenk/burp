@@ -732,8 +732,10 @@ static void update_screen_view_log(struct sel *sel, int *x, int col,
 	if(sel->client
 	  && sel->backup
 	  && (sel->backup->flags & (BU_WORKING|BU_FINISHING))
-	  && (sel->logop & BU_STATS_BACKUP))
-		return update_screen_live_counters(sel->client, x, col);
+	  && (sel->logop & BU_STATS_BACKUP)) {
+		update_screen_live_counters(sel->client, x, col);
+		return;
+	}
 
 	for(l=sel->llines; l; l=l->next)
 	{
