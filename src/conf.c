@@ -243,16 +243,6 @@ int add_to_strlist_include_uniq(struct conf *conf, const char *value)
 	return strlist_add_sorted_uniq(&(conf->data.sl), value, 1);
 }
 
-int add_to_strlist_include(struct conf *conf, const char *value)
-{
-	return add_to_strlist(conf, value, 1);
-}
-
-int add_to_strlist_exclude(struct conf *conf, const char *value)
-{
-	return add_to_strlist(conf, value, 0);
-}
-
 void conf_free_content(struct conf *c)
 {
 	if(!c) return;
@@ -846,18 +836,6 @@ static int set_conf(struct conf *c, const char *value)
 			break;
 	}
 	return 0;
-}
-
-int conf_set(struct conf **confs, const char *field, const char *value)
-{
-	int i=0;
-	int r=0;
-	for(i=0; i<OPT_MAX; i++)
-	{
-		if(strcmp(confs[i]->field, field)) continue;
-		r+=set_conf(confs[i], value);
-	}
-	return r;
 }
 
 static char *conf_data_to_str(struct conf *conf)

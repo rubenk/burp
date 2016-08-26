@@ -294,7 +294,6 @@ extern void confs_null(struct conf **confs);
 extern void confs_memcpy(struct conf **dst, struct conf **src);
 
 extern void free_incexcs(struct conf **confs);
-extern int conf_set(struct conf **confs, const char *field, const char *value);
 extern int confs_dump(struct conf **confs, int flags);
 
 extern struct strlist *get_strlist(struct conf *conf);
@@ -322,8 +321,6 @@ extern int set_mode_t(struct conf *conf, mode_t m);
 extern int set_float(struct conf *conf, float f);
 extern int set_uint64_t(struct conf *conf, uint64_t s);
 extern int add_to_strlist(struct conf *conf, const char *value, int include);
-extern int add_to_strlist_include(struct conf *conf, const char *value);
-extern int add_to_strlist_exclude(struct conf *conf, const char *value);
 extern int add_to_strlist_include_uniq(struct conf *conf, const char *value);
 
 extern enum burp_mode str_to_burp_mode(const char *str);
