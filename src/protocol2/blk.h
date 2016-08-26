@@ -67,7 +67,6 @@ extern int blk_set_from_iobuf_wrap_up(struct blk *blk, struct iobuf *iobuf);
 
 extern void blk_to_iobuf_sig(struct blk *blk, struct iobuf *iobuf);
 extern void blk_to_iobuf_sig_and_savepath(struct blk *blk, struct iobuf *iobuf);
-extern void blk_to_iobuf_fingerprint(struct blk *blk, struct iobuf *iobuf);
 extern void blk_to_iobuf_savepath(struct blk *blk, struct iobuf *iobuf);
 extern void blk_to_iobuf_index_and_savepath(struct blk *blk,
 	struct iobuf *iobuf);

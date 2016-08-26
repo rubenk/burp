@@ -216,11 +216,6 @@ static void to_iobuf_uint64(struct iobuf *iobuf, enum cmd cmd, uint64_t val)
 	iobuf_set(iobuf, cmd, buf.c, sizeof(buf));
 }
 
-void blk_to_iobuf_fingerprint(struct blk *blk, struct iobuf *iobuf)
-{
-	to_iobuf_uint64(iobuf, CMD_FINGERPRINT, blk->fingerprint);
-}
-
 void blk_to_iobuf_savepath(struct blk *blk, struct iobuf *iobuf)
 {
 	to_iobuf_uint64(iobuf, CMD_SAVE_PATH, blk->savepath);
