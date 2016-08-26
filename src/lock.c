@@ -114,13 +114,12 @@ int lock_test(const char *path)
 	// Would somebody please tell me how to test a lock on Windows?!
 	return 0;
 #else
-	int r=0;
 	int fdlock;
 
 	if((fdlock=open(path, O_WRONLY, 0666))<0)
 		return 0; // file does not exist - could have got the lock
 	errno=0;
-	if((r=lockf(fdlock, F_TLOCK, 0)) && (errno==EAGAIN || errno==EACCES))
+	if(lockf(fdlock, F_TLOCK, 0) && (errno==EAGAIN || errno==EACCES))
 	{
 		// could not have got the lock
 		close(fdlock);
