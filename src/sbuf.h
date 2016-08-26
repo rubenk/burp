@@ -68,8 +68,6 @@ extern int sbuf_to_manifest(struct sbuf *sb, struct fzp *fzp);
 
 extern int sbuf_pathcmp(struct sbuf *a, struct sbuf *b);
 
-extern void sbuf_print_alloc_stats(void);
-
 extern int sbuf_fill_from_file(struct sbuf *sb, struct fzp *fzp,
 	struct blk *blk, const char *datpath);
 extern int sbuf_fill_from_net(struct sbuf *sb, struct asfd *asfd,
