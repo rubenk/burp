@@ -611,6 +611,7 @@ end:
 	return ret;
 }
 
+__attribute__ ((noreturn))
 static void sighandler(__attribute__ ((unused)) int signum)
 {
 	locks_release_and_free(&locklist);
