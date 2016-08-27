@@ -275,17 +275,17 @@ static int load_conf_field_and_value(struct conf **c,
 	}
 	else if(!strcmp(f, "ratelimit"))
 	{
-		float f=0;
-		f=atof(v);
+		float fl=0;
+		fl=atof(v);
 		// User is specifying Mega bits per second.
 		// Need to convert to bytes per second.
-		f=(f*1024*1024)/8;
-		if(!f)
+		fl=(fl*1024*1024)/8;
+		if(!fl)
 		{
 			logp("ratelimit should be greater than zero\n");
 			return -1;
 		}
-		set_float(c[OPT_RATELIMIT], f);
+		set_float(c[OPT_RATELIMIT], fl);
 	}
 	else
 	{
