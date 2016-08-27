@@ -482,7 +482,7 @@ int send_whole_filel(struct asfd *asfd, const char *datapth,
 #ifdef HAVE_WIN32
 			}
 #endif
-			if(s<=0) break;
+			if(s==0) break;
 
 			*bytes+=s;
 			if(!MD5_Update(&md5, buf, s))
