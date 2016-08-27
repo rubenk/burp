@@ -20,6 +20,6 @@ struct protocol2
 };
 
 extern struct protocol2 *sbuf_protocol2_alloc(void);
-extern void sbuf_protocol2_free_content();
+extern void sbuf_protocol2_free_content(void);
 
 #endif
