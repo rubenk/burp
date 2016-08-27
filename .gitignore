@@ -49,3 +49,4 @@ config.out
 config.status
 libtool
 src/config.h
+cscope.out
