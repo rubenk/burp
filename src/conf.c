@@ -797,47 +797,6 @@ static int reset_conf(struct conf **c, enum conf_opt o)
 	return -1;
 }
 
-static int set_conf(struct conf *c, const char *value)
-{
-	switch(c->conf_type)
-	{
-		case CT_STRING:
-			if(set_string(c, value)) return 1;
-			break;
-		case CT_FLOAT:
-			if(set_float(c, atof(value))) return 1;
-			break;
-		case CT_E_BURP_MODE:
-		{
-			enum burp_mode bm;
-			bm=str_to_burp_mode(value);
-			if(bm==BURP_MODE_UNSET
-			  || set_e_burp_mode(c, bm))
-				return 1;
-			break;
-		}
-		case CT_E_RECOVERY_METHOD:
-		{
-			enum recovery_method rm;
-			rm=str_to_recovery_method(value);
-			if(rm==RECOVERY_METHOD_UNSET
-			  || set_e_recovery_method(c, rm))
-				return 1;
-			break;
-		}
-	// FIX THIS
-		case CT_E_RSHASH:
-		case CT_UINT:
-		case CT_MODE_T:
-		case CT_SSIZE_T:
-		case CT_E_PROTOCOL:
-		case CT_STRLIST:
-		case CT_CNTR:
-			break;
-	}
-	return 0;
-}
-
 static char *conf_data_to_str(struct conf *conf)
 {
 	size_t l=256;
