@@ -34,7 +34,7 @@ static int skip_data(FILE *inp, size_t s)
 	while((got=fread(buf, 1, min(sizeof(buf), s), inp))>0)
 	{
 		s-=got;
-		if(s<=0) break;
+		if(s==0) break;
 	}
 	if(s!=0)
 	{
@@ -93,7 +93,7 @@ static int ensure_write(char *buf, size_t got, FILE *outp)
 	while((wrote=fwrite(buf, 1, got, outp))>0)
 	{
 		got-=wrote;
-		if(got<=0) return 0;
+		if(got==0) return 0;
 	}
 	fprintf(stderr, "Error in write: %s\n", strerror(errno));
 	return -1;
@@ -108,7 +108,7 @@ static int extract_data(FILE *inp, FILE *outp, size_t s)
 		if(ensure_write(buf, got, outp))
 			return -1;
 		s-=got;
-		if(s<=0) break;
+		if(s==0) break;
 	}
 	if(s!=0)
 	{
