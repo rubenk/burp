@@ -881,7 +881,7 @@ struct conf **confs_alloc(void)
 		confs[i]=c;
 	}
 	return confs;
-};
+}
 
 void confs_free(struct conf ***confs)
 {
