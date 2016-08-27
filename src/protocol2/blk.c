@@ -5,7 +5,6 @@
 #include "../iobuf.h"
 #include "../log.h"
 #include "../protocol2/rabin/rabin.h"
-#include "rabin/rconf.h"
 
 struct blk *blk_alloc(void)
 {

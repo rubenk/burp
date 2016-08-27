@@ -4,7 +4,6 @@
 #include "../../cstat.h"
 #include "lline.h"
 #include "sel.h"
-#include "status_client_ncurses.h"
 
 struct sel *sel_alloc(void)
 {

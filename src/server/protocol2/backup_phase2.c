@@ -17,7 +17,6 @@
 #include "../manios.h"
 #include "../resume.h"
 #include "champ_chooser/champ_client.h"
-#include "champ_chooser/champ_server.h"
 #include "champ_chooser/hash.h"
 #include "dpth.h"
 #include "backup_phase2.h"

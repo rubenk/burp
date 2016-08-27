@@ -1,6 +1,5 @@
 #include "burp.h"
 #include "alloc.h"
-#include "log.h"
 #include "regexp.h"
 
 regex_t *regex_compile(const char *str)

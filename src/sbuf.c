@@ -5,7 +5,6 @@
 #include "attribs.h"
 #include "cmd.h"
 #include "conf.h"
-#include "handy.h"
 #include "log.h"
 #include "msg.h"
 #include "protocol2/blk.h"

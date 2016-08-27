@@ -7,13 +7,11 @@
 #include "fsops.h"
 #include "fzp.h"
 #include "handy.h"
-#include "hexmap.h"
 #include "iobuf.h"
 #include "log.h"
 #include "msg.h"
 #include "prepend.h"
 #include "protocol1/handy.h"
-#include "protocol2/blk.h"
 
 #include <sys/types.h>
 #include <sys/socket.h>

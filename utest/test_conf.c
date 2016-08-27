@@ -1,8 +1,6 @@
 #include <check.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "test.h"
-#include "../src/alloc.h"
 #include "../src/conf.h"
 
 static void check_default(struct conf **c, enum conf_opt o)

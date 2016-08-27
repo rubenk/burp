@@ -4,7 +4,6 @@
 #include "../async.h"
 #include "../cntr.h"
 #include "../log.h"
-#include "../prepend.h"
 #include "extrameta.h"
 #include "xattr.h"
 

@@ -1,5 +1,4 @@
 #include "burp.h"
-#include "alloc.h"
 #include "asfd.h"
 #include "conf.h"
 #include "fzp.h"

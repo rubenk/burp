@@ -2,7 +2,6 @@
 #include "../../attribs.h"
 #include "../../base64.h"
 #include "../../fzp.h"
-#include "../../handy.h"
 #include "../../hexmap.h"
 #include "../../iobuf.h"
 #include "../../log.h"

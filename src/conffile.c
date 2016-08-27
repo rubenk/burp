@@ -3,7 +3,6 @@
 #include "conf.h"
 #include "fsops.h"
 #include "handy.h"
-#include "lock.h"
 #include "log.h"
 #include "msg.h"
 #include "pathcmp.h"

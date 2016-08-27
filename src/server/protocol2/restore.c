@@ -6,15 +6,12 @@
 #include "../../cntr.h"
 #include "../../hexmap.h"
 #include "../../log.h"
-#include "../../prepend.h"
 #include "../../protocol2/blk.h"
-#include "../../regexp.h"
 #include "../../server/protocol1/restore.h"
 #include "../../slist.h"
 #include "../manio.h"
 #include "../restore.h"
 #include "../sdirs.h"
-#include "champ_chooser/hash.h"
 #include "restore.h"
 
 static int send_data(struct asfd *asfd, struct blk *blk,

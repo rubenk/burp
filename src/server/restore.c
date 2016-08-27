@@ -19,7 +19,6 @@
 #include "compress.h"
 #include "manio.h"
 #include "protocol1/restore.h"
-#include "protocol2/dpth.h"
 #include "protocol2/rblk.h"
 #include "protocol2/restore.h"
 #include "../protocol2/rabin/rabin.h"

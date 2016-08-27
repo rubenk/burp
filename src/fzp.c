@@ -1,6 +1,5 @@
 #include "burp.h"
 #include "alloc.h"
-#include "cmd.h"
 #include "fsops.h"
 #include "fzp.h"
 #include "log.h"

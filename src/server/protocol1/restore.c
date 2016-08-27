@@ -17,7 +17,6 @@
 #include "../../sbuf.h"
 #include "../../slist.h"
 #include "../sdirs.h"
-#include "dpth.h"
 #include "restore.h"
 
 #include <librsync.h>

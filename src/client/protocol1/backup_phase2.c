@@ -9,7 +9,6 @@
 #include "../../conf.h"
 #include "../../log.h"
 #include "../../protocol1/handy.h"
-#include "../../protocol1/msg.h"
 #include "../extrameta.h"
 #include "../find.h"
 #include "backup_phase2.h"

@@ -1,5 +1,4 @@
 #include <check.h>
-#include <stdlib.h>
 #include "../src/alloc.h"
 #include "test.h"
 
