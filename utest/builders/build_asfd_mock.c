@@ -121,7 +121,7 @@ struct asfd *asfd_mock_setup(struct ioevent_list *user_reads,
 	asfd->data1=(void *)user_reads;
 	asfd->data2=(void *)user_writes;
 	return asfd;
-};
+}
 
 void asfd_mock_teardown(struct ioevent_list *user_reads,
 	struct ioevent_list *user_writes)
