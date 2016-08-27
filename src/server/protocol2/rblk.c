@@ -117,6 +117,7 @@ static struct rblk *get_rblk(struct rblk *rblks, const char *datpath)
 			return &rblks[current_ind];
 		}
 	}
+	return NULL;
 }
 
 int rblk_retrieve_data(const char *datpath, struct blk *blk)
