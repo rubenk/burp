@@ -101,10 +101,9 @@ static char *cmd_to_text(enum cmd cmd)
 
 void cmd_print_all(void)
 {
-	int i=0;
 	char cmds[256]="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	printf("\nIndex of symbols\n\n");
-	for(i=0; cmds[i]; i++)
+	for(int i=0; cmds[i]; i++)
 		printf("  %c: %s\n", cmds[i], cmd_to_text((enum cmd)cmds[i]));
 	printf("\n");
 }
